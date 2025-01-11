@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo 2.0</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="box">
+        <div class="container">
+          <div class="name">
+            Welcome, Username!
+            <img
+              src="path/to/profile.jpg"
+              alt="User Profile Picture"
+              style="width: 50px; border-radius: 50%"
+            />
+          </div>
+          <div class="heading1">
+            <div>
+              <span style="font-size: 1.5rem">Today's Task</span>
+              <span style="font-size: 1rem" class="dateTime"></span>
+            </div>
+            <input  class="newTaskBtn" onclick="dropdown()" type="button" value="+ New Task" />
+          </div>
+          <div style="display: none;" class="dropdown">
+            <form class="dropdownForm">
+            <input class="todoTask" type="text" placeholder="Enter todo here.....">
+            <input class="todoTitle" type="text" placeholder="Enter todo title....">
+            <input class="todoDateTimeInput searchInput" type="datetime" placeholder="Enter task time....">
+            <button class="taskdataSubmitBtn" type="submit">Add Todo</button>
+          </form>
+          </div>
+          <div class="heading2">
+            <span>All <sup class="totalTask">0</sup></span> 
+           
+            <span class="clearAllBtn">Clear all</span>
+          </div>
+          <hr />
+          <div class="cardContainer">
+            <div class="card">
+              <div class="tasks">
+                <div class="task">
+                  <span class="taskes">buy a car</span>
+                  <span class="taskTitle">showroom</span>
+                </div>
+                <input type="checkbox" name="checkbox" id="checkbox" />
+              </div>
+              <hr />
+              <span>Today</span>
+              <span class="taskTime">12:00 - 01:30</span>
+            </div>
+
+            <div class="card">
+              <div class="tasks">
+                <div class="task">
+                  <span class="taskes">buy a car</span>
+                  <span class="taskTitle">showroom</span>
+                </div>
+                <input type="checkbox" name="checkbox" id="checkbox" />
+              </div>
+              <hr />
+              <span>Today</span>
+              <span class="taskTime">12:00 - 01:30</span>
+            </div>
+          </div>
+          <div class="searchCon">
+            <input type="search" class="searchIcon" placeholder="Search your todo...." />
+            <button><i class="fa-solid fa-magnifying-glass searchBtn"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./todo.js"></script>
+  </body>
+</html>
